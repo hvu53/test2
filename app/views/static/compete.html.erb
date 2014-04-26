@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="row span12">
+	<div class="compete">
+			<div class="text-center">
+				<%= image_tag("misc/img_onboardingrblogo.png", :alt => "redbul step challenge", :width => "250") %>
+				<h3> Steps Challenge </h3>
+				<br>
+				<div class="divider"> </div>
+				
+				<h3 class="top-10 yellow-text">Get set up in 3 simple steps</h3>
+				<h3 class="top-30 yellow-text">Step 1</h3>
+
+				<p class="top-20"> Be sure you are viewing this page on your iPhone or iPad's web browser (ie. Safari, Chrome, etc) </p>
+
+				<h3 class="top-30 yellow-text">Step 2</h3>
+
+				<p class="top-20"> Download and install the provisioning profile, and return to this page. </p>
+
+				<a href="http://i.jiff.com.s3.amazonaws.com/production/applications/myjiff/redbull_challenge/Compete.mobileprovision" class="top-10 btn btn-large btn-warning "> Download profile </a>
+
+
+				<h3 class="top-30 yellow-text">Step 3</h3>
+
+				<p class="top-20"> Download and install Complete App to join the Red Bull Steps Challenge. </p>
+				<br/>
+				<p class="top-20"> Use the subscription code: <span class="yellow-text"><%= params[:subscription_code].present? ? params[:subscription_code] : "rbf4f2013!" %></span></p>
+				
+				<%= image_tag("misc/compete@2x.png", :alt => "compete v1.0.0", :class=>"clearfix top-20", :width => "100px") %>
+				<br>
+				<p><small>Compete v1.0.0</small></p>
+				<br>
+				<a href="itms-services://?action=download-manifest&amp;url=http%3A%2F%2Fi.jiff.com.s3.amazonaws.com%2Fproduction%2Fapplications%2Fmyjiff%2Fredbull_challenge%2FCompete.plist" class="btn btn-large btn-warning"> Download app</a>
+
+			</div>
+		</div>
+	</div>
+</div>

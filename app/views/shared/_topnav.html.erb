@@ -1,0 +1,16 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div>
+        <ul class="nav pull-right top-links">
+          <li class="<%= 'active' if @topnav == 'employer' %>"> <%= link_to "EMPLOYERS".html_safe, employer_index_path, :alt =>"jiff and employer" %> </li>
+<!--           <li class="<%# 'active' if @topnav == 'health_plan' %>"> <%# link_to "HEALTH PLANS".html_safe, health_plan_index_path, :alt =>"jiff health plan" %></li>
+ -->          <li class="<%= 'active' if @topnav == 'partner' %>"> <%= link_to "PARTNERS".html_safe, partner_index_path, :alt =>"jiff and partner" %></li>
+          <li> <a href="http://blog.jiff.com/"> BLOG </a> </li>
+          <li class="menu"><a href="/static/rightnav" data-slidepanel="panel">MENU </a></li>
+        </ul>
+        <h3 class="muted top-10"><%= link_to image_tag("img_logoandtagline_Jiff.png", :alt =>"Jiff"), employer_index_path  %>  </h3>
+      </div>
+    </div>
+  </div>
+</div>

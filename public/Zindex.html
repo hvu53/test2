@@ -1,0 +1,367 @@
+<!doctype html>
+<!--[if IE 8 ]>    
+  <html lang="en" class="ie8 oldie">
+<![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9 oldie"> <![endif]-->
+<html lang="en" ng-app="jiff" ng-controller="AppCtrl">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/jiff_ico.ico">
+  	<link href='https://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
+
+    <title>Jiff Inc.</title>
+    <script src="jquery.min.js"></script>
+		<script src="jquery.transit.min.js"></script>
+		<script src="jquery.slideshowify.min.js"></script>
+    <style type="text/css">
+    /*
+		bkg-dark: #011A2E;
+		bkg-light: #002646;
+		link: #00A9FF;
+		bottom-link: #4f7a93;
+     */
+
+      body {
+      	background: #3f4c6b; /* Old browsers */
+      	font-family: 'Istok Web', sans-serif;
+      	font-size: 400;
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzZjRjNmIiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDExYTJlIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-radial-gradient(center, ellipse cover,  #3f4c6b 0%, #011a2e 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3f4c6b), color-stop(100%,#011a2e)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #3f4c6b 0%,#011a2e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #3f4c6b 0%,#011a2e 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #3f4c6b 0%,#011a2e 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #3f4c6b 0%,#011a2e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#011a2e',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+      	margin: 0px;
+      	padding: 0px;
+			  background-color: #011b2d;
+			  color: #fff;
+			  font-family: 'Istok Web', sans-serif !important; }
+			img {
+				border: none;
+			}
+			a {
+				color: #00A9FF;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			h1,h2 {
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+			p {
+				font-family: 'Istok Web', sans-serif;
+				font-weight: 400;
+			}
+			#wrapper {
+			  margin: 0 auto;
+			  text-align: center;
+			  font-family: 'Istok Web', sans-serif !important;
+			  min-height: 850px;
+			  margin-bottom: 50px; }
+
+			.header {
+				width: 100%;
+				height: 600px;
+				background: #000F22;
+			}
+			.carousel {
+				width: 100%;
+				position: relative;
+				height: 600px;
+				margin: 0 auto;
+				padding: 0;
+				z-index: 1000;
+			}
+			.center-form {
+				position: relative;
+				width: 50%;
+				margin: 0 auto;
+			}
+			.jiffy {
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				margin: 0 auto;
+				z-index: 2000;
+				margin-top: -500px;
+			}
+			.jiffy h1 {
+				font-size: 22px;
+			}
+			.jiffy p {
+				font-size: 18px;
+				text-shadow: 1px 1px 0px #000;
+        filter: dropshadow(color=#000, offx=1, offy=1);
+			}
+			.left {
+				float: left;
+			}
+			.left h3 {
+				font-weight: 400;
+				width: 300px;
+				font-size: 18px;
+			}
+			.left p a{
+				font-size: 13px;
+			}
+			.left {
+				width: 60%;
+				float: left;
+			}
+			.right {
+				width: 40%;
+				float: right;
+				text-align: right;
+
+			}
+			.footer-link {
+				color: #4f7a93;
+				margin-top: -15px;
+			}
+			.content-container  {
+				clear: both;
+				background: url('img_colorband.png') 0 0 repeat-x;
+				margin-top: 0px;
+			}
+			.content-container .content {
+				width: 70%;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			.intro {
+
+			  margin: 0px auto;
+			  font-size: 1.3em; }
+			  .intro .text {
+			    line-height: 30px; }
+
+			.hiring {
+			  margin-top: 30px; }
+
+			.thankyou {
+			  margin: 0 auto;
+			  padding: 20px;
+			  border-radius: 5px;
+			  -moz-border-radius: 5px;
+			  -webkit-border-radius: 5px;
+			  -webkit-box-shadow: 0 0 3px 1px #bbbbbb;
+			  -moz-box-shadow: 0 0 3px 1px #bbbbbb;
+			  box-shadow: 0 0 3px 1px #bbbbbb;
+			  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2,MakeShadow=true,ShadowOpacity=0.30);
+			  -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+			  zoom: 1;
+			  background: rgba(0, 0, 0, 0.05); }
+			  .thankyou h3 {
+			    font-weight: normal;
+			    font-size: 21px; }
+			  .thankyou p {
+			    margin-top: 10px;
+			    font-size: 18px; }
+
+			footer {
+			  font-size: 13px;
+			  margin: 20px auto;
+			  margin-top: 60px;
+			  margin-bottom: 20px;
+			  width: 100%; }
+
+
+			/* Large desktop */
+			@media (min-width: 1200px) {
+			  
+			  .intro {
+			    width: 80%; }
+
+			  .thankyou {
+			    width: 50%; } }
+			@media (min-width: 979px) {
+			 
+
+			  .intro {
+			    width: 90%; }
+
+			  .thankyou {
+			    width: 50%; } }
+			/* Portrait tablet to landscape and desktop */
+			@media (min-width: 768px) and (max-width: 979px) {
+			  
+			  .intro {
+			    width: 90%; }
+
+			  .thankyou {
+			    width: 50%; } }
+			/* Landscape phone to portrait tablet */
+			@media (max-width: 767px) {
+			 
+			  .intro {
+			    width: 90%; }
+
+			  .thankyou {
+			    width: 55%; } }
+			/* Landscape phones and down */
+			@media (max-width: 480px) {
+			
+			  .intro {
+			    width: 90%; } 
+
+			  .right {
+				width: 40%;
+				margin-top: 20px;
+				float: none;
+				text-align: left;
+
+				}
+				.logo {
+					margin-top: -70px;
+				}
+
+				.logo img {
+					height: 80px;
+				}
+
+				.jiffy {
+					width: 100%;
+				}
+
+				.center-form {
+					width: 88%;
+				}
+
+			  }
+
+			  .ie8 #wrapper {
+			  	margin-top: 60px;
+			    width: 60%; }
+
+			  .ie8 .intro {
+			    width: 90%; }
+
+			  .ie8 .thankyou {
+			    width: 50%; }
+			  .ie8 .intro .ltext {
+			  	line-height: 1.5em !important;
+			  	font-size: 18px !important;
+			  }
+			  .ie8 .btn-large {
+			  background-color: #ff8000;
+			  background-image: -moz-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: -ms-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: -webkit-gradient(linear, 0 50%, 0 0, from(#ffbc79), to(#ff8000));
+			  background-image: -webkit-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: -o-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: linear-gradient(top, #ffbc79, #ff8000);
+			  background-repeat: no-repeat;
+			  height: 40px;
+			  width: 270px;
+			  clear: both;
+			  margin-top: 10px;
+			  margin-left: -7px;
+			  border-radius: 4px;
+			  -moz-border-radius: 4px;
+			  -webkit-border-radius: 4px;
+			  border: 1px solid #ff8000;
+			  color: #fff;
+			  font-size: 15px;
+			  text-decoration: none;
+			  margin-bottom: 8px;
+			  margin-bottom: 40px;
+			  }
+		</style>
+
+  </head>
+
+  <body class="jiff <%= @invite_source %>">
+
+    <div id="main-view" data-role="content" class="content">
+       
+        <section class="">
+
+						<div class="header">
+							<!-- <img src="img_logo2.png" border="0" /> -->
+							<div class="carousel">
+								<div class="photo">
+									<img src="img_heroimage_1.png" border="0" />
+								</div>
+								<div class="photo">
+									<img src="img_heroimage_2.png" border="0" />
+								</div>
+								<div class="photo">
+									<img src="img_heroimage_3.png" border="0" />
+								</div>
+								<div class="photo">
+									<img src="img_heroimage_4.png" border="0" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="center-form">
+							<div class="jiffy">
+								<div class="logo"><img src="img_logo2.png"/> </div>
+								<h1> YOUR DIGITAL PASSPORT TO BETTER HEALTH OUTCOMES </h1>
+								<p>
+									Jiff is a digital health technology company that enables healthcare organizations to engage in collaborative, connected relationships with the consumers they serve. Using Jiff's HIPAA compliant Platform, Jiff's customers can quickly deploy elegant and consumer driven digital health experiences via the web or mobile devices that combine the best of the consumer Web with the best of their clinical content.
+								</p>
+								<p>
+									Stay tuned for some exciting news from us soon!
+								</p>
+							</div>
+						</div>
+						<div class="content-container">
+							<div class="content">
+								<div class="left">
+									<h3>Company</h3>
+									<p>
+										&#160;&#160;&#160;<a href="about.html">About Jiff</a>
+										<br>
+										&#160;&#160;&#160;<a href="http://jiff.theresumator.com/" target="_blank">Careers</a>
+									</p>
+
+									<h3>Contact us</h3>
+									<p>
+										&#160;&#160;&#160;<a href="mailto:jiff@racepointgroup.com?Subject=I%20am%20interested%20in%20Jiff">press@jiff.com</a>
+										<br>
+										&#160;&#160;&#160;<a href="mailto:partnerprogram@jiff.com?Subject=I%20am%20interested%20in%20Jiff's%20Partner%20Program">partnerprogram@jiff.com</a>	
+										<br>
+										&#160;&#160;&#160;<a href="mailto:developerprogram@jiff.com?Subject=I%20am%20interested%20in%20Jiff's%20Developer%20Program">developerprogram@jiff.com</a>
+									</p>
+
+									<h3>Jiff in the News</h3>
+									<p>
+										&#160;&#160;&#160;Venturebeat: <a href="http://venturebeat.com/2013/05/14/investors-pay-attention-to-these-three-health-trends/" target="_blank">Investors, Pay Attention To These Three Health Trends</a>
+										<br>
+										&#160;&#160;&#160;mHIMSS: <a href="http://www.mhimss.org/news/four-ways-real-time-data-will-change-healthcare" target="_blank">Four Ways That Real-Time Data Will Change Healthcare</a>
+										<br>
+										&#160;&#160;&#160;Forbes: <a href="http://www.forbes.com/sites/ciocentral/2012/06/04/5-ways-mobile-apps-will-transform-healthcare" target="_blank">Five Ways Mobile Apps Will Transform Healthcare</a>
+									</p>
+
+									<footer>
+					          <div class="footer-link"> 
+				              Healthcare in a Jiff &copy;2013 Jiff, Inc. &nbsp; &bull; &nbsp; HIPAA Compliant  &nbsp; &bull; &nbsp; Made in Palo Alto
+					          </div>
+						      </footer>
+								</div>
+							
+								<div class="right">
+									<img src="img_icons.png"/>
+								</div>
+							</div>
+						</div>
+        </section>
+
+    </div>
+    <script type="text/javascript">
+  		$('.photo img').slideshowify({ parentEl:'.carousel' });
+  	</script>
+  </body>
+
+  
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jiff</title>
+  <meta name="description" content="Connected Health. Better Outcomes.">
+	<meta name="keywords" content="Jiff, digital health">
+	<META NAME="ROBOTS" CONTENT="Jiff, Connected Health. Better Outcomes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="viewport" content="width=device-width" />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+  <link href='https://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+  <%= favicon_link_tag 'jiff.ico' %>
+
+  <%= yield(:head) %>
+
+</head>
+<body>
+<div class="wrap-all">
+	<%= yield %>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('[data-slidepanel]').slidepanel({
+	        orientation: 'right',
+	        mode: 'push'
+	    });
+	});
+</script>
+</body>
+</html>

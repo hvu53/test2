@@ -1,0 +1,57 @@
+<%= content_for :head do %>
+  <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic|Kreon:300,400,700'
+    rel='stylesheet' type='text/css'>
+	<style>
+		body, p, h1, h2, h3, h4, h5, h6 {
+		  font-family: 'Istok Web', sans-serif;
+		}
+		a, button {
+		  font-family: 'Kreon', sans-serif;
+		}
+		.btn-warning {
+			color: #333;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			background-color: #ffbf00;
+			background-image: -moz-linear-gradient(top, #ffbf00, #ffbf00);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffbf00), to(#ffbf00));
+			background-image: -webkit-linear-gradient(top, #ffbf00, #ffbf00);
+			background-repeat: repeat-x;
+			padding: 11px 36px;
+		}
+		.btn-warning:hover {
+			color: #333;
+			background-color: #ffbf00;
+			background-image: -moz-linear-gradient(top, #ffbf00, #ffbf00);
+			background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffbf00), to(#ffbf00));
+			background-image: -webkit-linear-gradient(top, #ffbf00, #ffbf00);
+		}
+	</style>
+<% end -%>
+
+<div class="container">
+	<div class="row span12">
+	<div class="compete">
+			<div class="text-center">
+				<%= image_tag("misc/img_holiday_in_a_jiff.png", :alt => "Holiday in a Jiff", :width => "250") %>
+				<h2 class="top-10" style="font-size: 28px;"> Get Compete by Jiff </h2>
+				<p class="top-20" style="color:#cccccc; font-size: 0.85em;"> Be sure you are viewing this page on your iPhone or iPad</p>
+				
+				<h3 class="top-20">Step 1</h3>
+
+				<h4 class="top-10"> Install the provisioning profile</h4>
+
+				<a href="http://i.jiff.com.s3.amazonaws.com/production/applications/myjiff/winter_challenge/Compete.mobileprovision" class="top-10 btn btn-large btn-warning "> Install Profile </a>
+
+				<h3 class="top-20">Step 2</h3>
+
+				<h4 class="top-10"> Download Compete by Jiff</h4>
+
+				<%= image_tag("misc/compete@2x.png", :alt => "compete v1.0.0", :class=>"clearfix top-20", :width => "100px") %>
+
+				<br/>
+				<a href="itms-services://?action=download-manifest&url=http%3A%2F%2Fi.jiff.com.s3.amazonaws.com%2Fproduction%2Fapplications%2Fmyjiff%2Fwinter_challenge%2FCompete.plist" class="btn btn-large btn-warning top-10"> Download App</a>
+
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+<div class="clearfix">
+	<ul class="nav right-links">
+	  <li class="<%= 'active' if @topnav == 'employer' %>"> <%= link_to "EMPLOYERS".html_safe, employer_index_path, :alt =>"jiff and employer" %>   <!-- <a href="#">EMPLOYER <span> SOLUTION</span> </a> --></li>
+<!-- 	  <li class="<%# 'active' if @topnav == 'health_plan' %>"> <%# link_to "HEALTH PLANS".html_safe, health_plan_index_path, :alt =>"jiff health plan" %></li>
+ -->	  <li class="<%= 'active' if @topnav == 'partner' %>"> <%= link_to " DIGITAL HEALTH PARTNERS".html_safe, partner_index_path, :alt =>"jiff and partner" %></li>
+	</ul>
+</div>
+
+<div class="clearfix footer">
+	<ul class="footer-links top-20">
+		<li> <%= link_to "About Us", about_path %> </li>
+		<li class="top-5"> <%= link_to "News", news_path %> </li>
+		<li class="top-5"> <%= link_to "FAQ", faq_path %> </li>
+	</ul>
+</div>
+
+<div class="clearfix social-media left-20 top-20">
+	<ul>
+		<li> <a href="https://twitter.com/JiffInc" class="footer-twitter" target="_blank"> </a></li>
+	</ul>
+</div>
+
+<div class="clearfix logo-footer left-20 top-20">
+	<ul>
+		<li> <%=image_tag("img_logo_sidenav.png", :alt =>"Jiff, HIPPA Compliant") %></li>
+	</ul>
+</div>
+
+<div class='clearfix contact-us top-20 left-20'>
+	<p class='left-10'> Contact Info</p>
+	<ul class='top-10'>
+		<li> Business Contact <br> <a href="mailto:partners@jiff.com" > partners@jiff.com </a></li>
+		<li class='top-10'> Press Contact <br> <a href="mailto:press@jiff.com" > press@jiff.com </a></li>
+	</ul>
+</div>

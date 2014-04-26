@@ -1,0 +1,52 @@
+
+<%= render :partial => "/shared/topnav" %>
+	<div class="jumbotron masthead top-50">
+		<h2 class="text-center"> The Health Outcomes Marketplace: <br>Your wellness product. Dozens of employers.<br>Millions of consumers. Enough said. </h2>
+		<br> <br>
+		<div class="clearfix">
+			<%=image_tag("img_partnerpage_01.png", :alt =>"Jiff Stay Healthy", :class => "image-center")  %>
+		</div>
+	</div>
+
+	<div class="container top-50">
+		<div class="row-fluid">
+			<section class="section">
+				<h2 class="text-center bottom-10"> Get paid </h2>
+				<h4 class="text-center"> Tap into employer and consumer wellness dollars by joining the Health Outcomes Marketplace<sup>TM</sup></h4>
+				<div class="clearfix top-50">	
+						<%=image_tag("img_partnerpage_02.png", :alt =>"Jiff Build Better", :class => "text-center",:class=>"image-center")  %>
+				</div>
+				<br><br>
+			</section>
+
+			<section class="section">
+				<h2 class="text-center bottom-10"> Connect easily</h2>
+				<h4 class="text-center"> Connect your awesome program, app or device to our platform via our API </h4>
+				<div class="anim">
+					<div class="clearfix top-50" id="anim-connect1">			
+						<%=image_tag("img_healthplanpage_04_animatedgif.gif", :alt =>"Jiff Stay Healthy", :class=>"image-center")  %>
+					</div>
+					<div class="clearfix top-50" id="anim-connect2">			
+						<%=image_tag("img_healthplanpage_04.png", :alt =>"Jiff Stay Healthy", :class=>"image-center")  %>
+					</div>
+				</div>
+				<br><br>		
+			</section>
+
+			<section class="section">
+				<h2 class="text-center bottom-10"> Current integrations </h2>
+				<h4 class="text-center"> Invest more in health outcomes and less in sales and marketing </h4>
+				<div class="clearfix top-50">	
+						<%=image_tag("img_integrations.png", :alt =>"Jiff Build Better", :class => "text-center",:class=>"image-center")  %>
+				</div>
+				<br><br>		
+			</section>
+
+			<section class="section" id="contact">
+				<h2 class="text-center"> Apply to the marketplace now </h2>
+				<div class="span3"> </div>
+				<%= render :partial => "/messages/new" %>
+			</section>
+			
+		</div>
+	</div>

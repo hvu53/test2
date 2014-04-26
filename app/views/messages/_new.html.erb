@@ -1,0 +1,49 @@
+	<%= form_for Message.new, :url => messages_path, :remote => true do |f| %>
+	<!-- 	<div class="clearfix">
+		  <%# if @message.errors.any? %>
+		    <div class="error_messages">
+		      <h2><%#= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+		      <ul>
+		      <%# @message.errors.full_messages.each do |msg| %>
+		        <li><%#= msg %></li>
+		      <%# end %>
+		      </ul>
+		    </div>
+		  <%# end %>
+		</div> -->
+		<div class="top-20">
+			
+			<div class="span3">
+				<div class="clearfix">
+			    <%= f.text_field :cname, :placeholder => "Your company name", :class =>"input-large" %>
+			  </div>
+			  <div class="clearfix">
+			    <%= f.text_field :name, :placeholder => "Your full name", :class =>"input-large" %>
+			  </div>
+			  <div class="clearfix">
+			      <%= f.text_field :title, :placeholder => "Your title", :class =>"input-large" %>
+		    </div>
+			  <div class="clearfix">
+			    <%= f.text_field :email, :placeholder => "Your work email", :class =>"input-large" %>
+			  </div>
+			  
+		  </div>
+		  <div class="span3">
+
+
+		    <%= f.text_area :content, :size => "80x8", :placeholder => "Questions, messages, or topics you are interested in...", :class=>"input-large" %>
+		  </div>
+		  <div>
+		  	<%#= f.select :subject, options_for_select(["A","B","C"]), {:prompt => "Select subject"}, :class => "select-subject"%>
+		  </div>
+		</div>
+		<br>
+		<div class="clearfix text-center top-20">
+			<br>
+			<p>If you have troubles with the form above, please send us an email directly to <a href="mailto:partners@jiff.com" > partners@jiff.com </a> </p>
+			<br>
+		</div>
+	  <div class="actions clearfix text-center">
+	  	<%= f.submit "      Send      ", :class => "btn btn-warning top-10" %>
+	 	</div>
+	<% end %>

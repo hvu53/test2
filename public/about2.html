@@ -1,0 +1,250 @@
+<!doctype html>
+<!--[if IE 8 ]>    
+  <html lang="en" class="ie8 oldie">
+<![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9 oldie"> <![endif]-->
+<html lang="en" ng-app="jiff" ng-controller="AppCtrl">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/jiff.ico">
+  	<link href='https://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css'>
+
+    <title>Jiff Inc.</title>
+    <script src="jquery.min.js"></script>
+		<script src="jquery.transit.min.js"></script>
+		<script src="jquery.slideshowify.min.js"></script>
+
+    <style type="text/css">
+    /*
+		bkg-dark: #011A2E;
+		bkg-light: #002646;
+		link: #00A9FF;
+		bottom-link: #4f7a93;
+     */
+
+      body {
+      	background: #011A2E; /* Old browsers */
+      	font-family: 'Istok Web', sans-serif;
+      	font-size: 400;
+      	height: 100%;
+
+      	margin: 0px;
+      	padding: 0px;
+			  color: #fff;
+			  font-family: 'Istok Web', sans-serif !important; }
+			img {
+				border: none;
+			}
+			a {
+				color: #00A9FF;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			h1,h2 {
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+			p {
+				font-family: 'Istok Web', sans-serif;
+				font-weight: 400;
+			}
+		
+			.content h3 {
+				text-transform: capitalize;
+				font-weight: 400;
+				margin-top: 60px;
+			}
+			.section {
+				padding: 0px 0px;
+			}
+			.section h4 {
+				font-weight: bold;
+			}
+
+			.section p {
+				margin-top: -15px;
+			}
+			.jiffy {
+				
+				text-align: center;
+				margin: 0 auto;
+			}
+			.jiffy h1 {
+				font-size: 22px;
+			}
+			.jiffy p {
+				font-size: 18px;
+			}
+		
+			.footer-link {
+				color: #4f7a93;
+				margin-top: -15px;
+			}
+			
+			.jiff-contact {
+				width: 550px;
+				margin: 50px auto;
+			}
+
+			footer {
+			  font-size: 13px;
+			  margin: 20px auto;
+			  margin-top: 60px;
+			  margin-bottom: 20px;
+			  width: 100%; 
+			  text-align: center;}
+
+			/* Large desktop */
+			@media (min-width: 1200px) {
+			  
+			  .intro {
+			    width: 80%; }
+
+			  .thankyou {
+			    width: 50%; } }
+			@media (min-width: 979px) {
+			 
+
+			  .intro {
+			    width: 90%; }
+
+			  .thankyou {
+			    width: 50%; } }
+			/* Portrait tablet to landscape and desktop */
+			@media (min-width: 768px) and (max-width: 979px) {
+			  
+			  .intro {
+			    width: 90%; }
+
+			  .thankyou {
+			    width: 50%; } }
+			/* Landscape phone to portrait tablet */
+			@media (max-width: 767px) {
+			 
+			  .intro {
+			    width: 90%; }
+
+			  .thankyou {
+			    width: 55%; } }
+			/* Landscape phones and down */
+			@media (max-width: 480px) {
+			
+			  .intro {
+			    width: 90%; } 
+
+			  .right {
+				width: 40%;
+				margin-top: 20px;
+				float: none;
+				text-align: left;
+
+				}
+				.logo {
+					margin-left: -120px;
+				}
+
+			  }
+
+			  .ie8 #wrapper {
+			  	margin-top: 60px;
+			    width: 60%; }
+
+			  .ie8 .intro {
+			    width: 90%; }
+
+			  .ie8 .thankyou {
+			    width: 50%; }
+			  .ie8 .intro .ltext {
+			  	line-height: 1.5em !important;
+			  	font-size: 18px !important;
+			  }
+			  .ie8 .btn-large {
+			  background-color: #ff8000;
+			  background-image: -moz-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: -ms-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: -webkit-gradient(linear, 0 50%, 0 0, from(#ffbc79), to(#ff8000));
+			  background-image: -webkit-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: -o-linear-gradient(top, #ffbc79, #ff8000);
+			  background-image: linear-gradient(top, #ffbc79, #ff8000);
+			  background-repeat: no-repeat;
+			  height: 40px;
+			  width: 270px;
+			  clear: both;
+			  margin-top: 10px;
+			  margin-left: -7px;
+			  border-radius: 4px;
+			  -moz-border-radius: 4px;
+			  -webkit-border-radius: 4px;
+			  border: 1px solid #ff8000;
+			  color: #fff;
+			  font-size: 15px;
+			  text-decoration: none;
+			  margin-bottom: 8px;
+			  margin-bottom: 40px;
+			  }
+		</style>
+
+  </head>
+
+  <body class="jiff <%= @invite_source %>">
+
+    <div id="main-view" data-role="content" class="content">
+       
+        <section class="jiff-contact">
+						
+						<div class="center-form">
+							<div class="jiffy">
+								<div class="logo">
+									<a href="/"><img src="img_logo2.png"/></a>
+								</div>
+								<h1> About Jiff, Inc. </h1>
+								<p>
+									The future of digital health will see the full integration of the healthcare ecosystem where employers, payers, health care providers and institutions, doctors and patients and health-conscious consumers can all connect, engage and share information all in one place. It's Jiff's mission to help get us there by focusing on the power of combining the best of the consumer web with the best of clinical practice to improve access, lower costs and improve outcomes. 
+								</p>
+								<p>
+									<h3>Our Story</h3>
+								<p>
+									James Currier and Stan Chudnovsky, two devastatingly handsome Internet pioneers, have built some of the most popular social networks and social games in the world. They founded Jiff in 2010 to transform the consumer health care experience through the application of the same principles they used in their work in social networking and gaming. They recruited top design talent and in 2011, were joined by Derek Newell, a health conscious and fit (British slang for "attractive," not "in shape," though he isn't bad in that department either) executive with deep experience in disease management, remote patient monitoring and digital health applications.
+								</p>
+								<br/>
+								<p>
+									Throughout 2011 and 2012, Jiff launched multiple digital health applications while quietly building the Jiff digital health platform. Stay tuned for more on that very soon!
+								</p>
+								<br>
+							</div>
+						</div>
+						<div class="content-container">
+							<div class="content">
+								<!-- <h3>Frequently Asked Questions</h3> -->
+							<!-- 	<section class="section">
+									<h4>What is Jiff Inc</h4>
+									<p> Jiff is a digital health technology company that enables healthcare system to engage in collaborative, connected relationships with the consumers they serve. </p>
+								</section>
+								<section class="section">
+									<h4>What is Jiff Inc</h4>
+									<p> Jiff is a digital health technology company that enables healthcare system to engage in collaborative, connected relationships with the consumers they serve. </p>
+								</section> -->
+								<footer>
+					        <div class="footer-link"> 
+				            Healthcare in a Jiff &copy;2013 Jiff, Inc. &nbsp; &bull; &nbsp; HIPAA Compliant  &nbsp; &bull; &nbsp; Made in Palo Alto
+					         </div>
+						     </footer>
+							</div>
+							
+								
+							</div>
+						</div>
+        </section>
+
+    </div>
+    <script type="text/javascript">
+  		//$('.photo img').slideshowify({ parentEl:'.carousel' });
+  	</script>
+  </body>
+
+  
+</html>

@@ -1,0 +1,110 @@
+
+<%= render :partial => "/shared/topnav" %>
+	<div class="jumbotron masthead top-50">
+		<h2 class="text-center"> Everything you need to create exceptional digital health experiences </h2>
+		<br><br>
+		<div class="clearfix"> 
+		
+				<%=image_tag("img_healthplanpage_01.png", :alt =>"Jiff Stay Healthy", :class => "image-center")  %>
+	
+		</div>
+		<br><br><br>
+		<div class="container text-center"> 
+			<p><a href="#myAnchor" rel="" id="anchor1" class="anchorLink btn btn-info">Contact Us</a></p>
+		</div>
+	</div>
+
+	<div class="container top-50">
+		<div class="row-fluid">
+			<section class="section">
+				<h2 class="text-center bottom-10"> Engage your consumers </h2>
+				<h4 class="text-center"> Bring the beautiful user interfaces consumers expect to your clinical programs</h4>
+				<div class="clearfix top-50">	
+						<%=image_tag("img_healthplanpage_02.png", :alt =>"Jiff Build Better", :class => "text-center",:class=>"image-center")  %>
+				</div>
+				<br><br>
+				
+			</section>
+
+			<section class="section">
+				<h2 class="text-center bottom-10"> Digitize and scale your program</h2>
+				<h4 class="text-center"> Quickly virtualize your clinical programs to reach more consumers and increase impact</h4>
+				<div class="clearfix top-50">
+					<%=image_tag("img_healthplanpage_03.png", :alt =>"Jiff Stay Healthy", :class=>"image-center")  %>
+				</div>
+				<br>
+			</section>
+
+			<section class="section">
+				<h2 class="text-center bottom-10"> Connect your programs</h2>
+				<h4 class="text-center"> Allow consumers to leverage popular health applications and devices in your programs</h4>
+				<div class="anim">
+					<div class="clearfix top-50" id="anim-connect1">			
+						<%=image_tag("img_healthplanpage_04_animatedgif.gif", :alt =>"Jiff Stay Healthy", :class=>"image-center")  %>
+					</div>
+					<div class="clearfix top-50" id="anim-connect2">			
+						<%=image_tag("img_healthplanpage_04.png", :alt =>"Jiff Stay Healthy", :class=>"image-center")  %>
+					</div>
+				</div>
+				<br>
+			</section>
+
+			<section class="section">
+				<h2 class="text-center bottom-10"> Get to market faster </h2>
+				<h4 class="text-center"> Build your digital health program cheaper, faster, better</h4>
+				<div class="anim2">
+					<div class="clearfix top-50" id="anim-connect3">			
+						<canvas id="myCanvas" width="670" height="500">
+				        <!-- Insert fallback content here -->
+				        Sorry, your browser doesn't support canvas technology
+				    </canvas>
+				    
+				    
+				    <script>
+						var width = 670,
+							height = 500,
+							frames = 30, 
+							currentFrame = 0,
+					 
+							canvas = document.getElementById("myCanvas");
+							ctx = canvas.getContext("2d");
+							image = new Image()
+							image.src = 'assets/img_healthplanpage_05_sprite.png';
+					 
+						var draw = function(){
+							ctx.clearRect(0, 0, width, height);
+							ctx.drawImage(image, 0, height * currentFrame, width, height, 0, 0, width, height);
+					 
+							if (currentFrame == frames) {
+							  currentFrame = 0;
+							} else {
+							  currentFrame++;
+							}
+						}
+					 
+						setInterval(draw, 100);
+					</script>
+					
+					</div>
+					<div class="clearfix top-50" id="anim-connect4">			
+						<%=image_tag("img_healthplanpage_05.png", :alt =>"Jiff Stay Healthy", :class=>"image-center")  %>
+					</div>
+				</div>
+				<br>
+			</section>
+
+			<section class="section">
+				<h2 class="text-center bottom-10"> The catch </h2>
+				<h4 class="text-center"> It doesn't exist. We do all the work for you. Really.</h4>
+			
+				<br>
+			</section>
+
+			<section class="section" id="contact">
+				<h2 class="text-center"><a name="myAnchor" id="myAnchor" style="color:white;cursor:text;">Contact us for more information</a></h2>
+				<div class="span3"></div>
+				<%= render :partial => "/messages/new" %>
+			</section>
+			
+		</div>
+	</div>
