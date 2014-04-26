@@ -15,30 +15,42 @@
   h1 {
   font-size: 24px; }
 
-h3 {
+  h3 {
   font-size: 18px;
   text-transform: uppercase; }
 
-h1, h2, h3 {
+  h1, h2, h3 {
   color: #dedede;
   font-family: Molengo; }
-h2 {
+  h2 {
   font-size: 24px;
   color: #0055ab;
    }
   .narrow-container {
   width: 80%;
   margin: 50px auto; }
+  .strike {
+
+  }
+  .red {
+    color: #e67a77;
+  }
+  .green {
+    color: #40cbbf;
+  }
   </style>
 </head>
 
 <body>
   <div class="narrow-container">
+    <p> Strike through for completed </p>
+    <p> Red for must do</p>
+    <p> Green for incomplete</p>
     <h2> Things that I need to <strong>STOP</strong> doing: </h2>
       <ul>
          <li>Stop shopping for things I don't need (shop no more than 2 times / month other than food)</li>
          <li>Stop complaining. Think why &amp; how to improve </li>
-         <li>Stop asking "CAN". Ask "HOW".</li>      
+         <li>Stop asking "CAN" (Can I ...). Ask "HOW" (How will I ...).</li>      
       </ul>
     <h2> Things that I need to <strong>START</strong> doing: </h2>
       <div class="left-20">
@@ -46,14 +58,14 @@ h2 {
           <div class="left-20">
           <h4>* Programming </h4>
           <ul>
-              <li> Python ***</li>
-              <li> Data Structure &amp; Algorithm ***</li>
+              <li class="green"> Python ***</li>
+              <li class="red"> Data Structure &amp; Algorithm ***</li>
               <li> Javascript </li>
               <li> C++</li>
           </ul>
           <h4>* Design</h4>
               <ul>
-                  <li> Illustrator</li>
+                  <li class="green"> Illustrator</li>
                   <li> Graphics, Icons</li>
                   <li> Typography </li>
               </ul>
@@ -61,23 +73,23 @@ h2 {
 
           <h3> <strong>MOOC CLASSES</strong> </h3>
           <ul>
-              <li> Statistics 1,2,3 </li>
+              <li class="green"> Statistics 1,2,3 </li>
               <li> Probability MIT </li>
               <li> Machine Learning ***</li>
               <li> Algorithms ***</li>
-              <li> Human genome ***(udacity)</li>
+              <li class="red"> Human genome ***(udacity)</li>
 
           </ul>
 
           <h3>PROJECTS</h3>
-          <ul> <li>Build something that people would use </li>
+          <ul> <li class="red">Build something that people would use </li>
             <li> Volunteer at hospital</li>
-            <li> Cancer walk </li>
+            <li class="red"> Cancer walk </li>
           </ul>
 
 
           <h3>Family</h3>
-          <ul><li> Call home once/ week/ 2 weeks</li> </ul>
+          <ul><li class="red"> Call home once/ week/ 2 weeks</li> </ul>
 
           <h3>Fitness</h3>
           <ul>
@@ -88,7 +100,7 @@ h2 {
 
           <h3> <strong>Things I always wanted to learn/ know more about:</strong> </h3>
           <ul>
-              <li> Bio-engineering/ Genomics ***</li>
+              <li class="red"> Bio-engineering/ Genomics ***</li>
               <li> Trading *** </li>
               <li> Photography * </li>
   
@@ -96,7 +108,7 @@ h2 {
 
           <h3> Reading/ Comunication/ Writings </h3>
           <ul>
-            <li> Spend at least 30-45 min/ day on news</li>
+            <li class="green"> Spend at least 30-45 min/ day on news</li>
             <li>Read proactively and critically</li>
             <li> Redo my site &amp; write blog ? </li>
           </ul>
@@ -105,19 +117,19 @@ h2 {
           <div class="left-20">
             <h4> Fiction/ Non-fiction</h4>
             <ul>
-              <li> 1984 </li>
-              <li> Behind the Beautiful Forevers</li>
-              <li> Gun, germs &amp; steel</li>
-              <li> Einstein </li>
+              <li class="red"> 1984 </li>
+              <li class="red"> Behind the Beautiful Forevers</li>
+              <li class="green"> Gun, germs &amp; steel</li>
+              <li class="green"> Einstein </li>
               <li> The wealth of nations </li>
-              <li> Blink </li>
+              <li class="green"> Blink </li>
               <li> Catch 22 </li>
               <li> The hitchhiker's guide to the galaxy</li>
             </ul>
 
             <h4> Business </h4>
             <ul>
-              <li> Founders at work</li>
+              <li class="green"> Founders at work</li>
               <li> 4 steps to the epiphany </li>
               <li> Made to stick</li>
               <li> Blue ocean strategy</li>
@@ -155,7 +167,7 @@ h2 {
             <li> It's the small things that matter</li>
             <li> Never afraid to try out things. Fail early. Fail often. Keep what works. </li>
             <li>We become what we think about</li>
-            <!-- <li> Your time is limited, so don't waste it living someone else’s life.</li> -->
+            <!-- <li> Your time is limited, so don't waste it living someone else's life.</li> -->
            <!--  <li> Build your own dreams, or someone else will hire you to build theirs.</li> -->
            <!--  <li> It’s not the years in your life that count. It’s the life in your years.</li> -->
 
